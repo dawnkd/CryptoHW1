@@ -7,7 +7,7 @@ PORT = 8123
 def encrypt_string(input_str):
 	to_encrypt = np.unpackbits(bytearray(input_str,'utf_8')).reshape(-1,8)
 	encrypted = np.apply_along_axis(DES.apply, 1, to_encrypt, DES.key_test,True).astype(np.uint8)
-	return "".join(encrypted.flatten().astype(str).tolist())
+	return "poop"#"".join(encrypted.flatten().astype(str).tolist())
 
 
 print("Enter string to encrypt and send:")
